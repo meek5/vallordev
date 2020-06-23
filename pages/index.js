@@ -303,7 +303,7 @@ export default function Home() {
           text-decoration-line: underline;
         }
         .card-contact button{
-          border: 2px solid #F4A242;
+          border: 1px solid #F4A242;
           box-sizing: border-box;
           border-radius: 25px;
           color:#F4A242;
@@ -339,7 +339,7 @@ export default function Home() {
           text-align: center;
         }
         .card-new-project button{
-          border: 2px solid #fff;
+          border: 1px solid #fff;
           box-sizing: border-box;
           border-radius: 25px;
           background-color:transparent;
