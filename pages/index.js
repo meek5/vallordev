@@ -355,7 +355,7 @@ export default function Home() {
           background-color:#F4A242;
           color:#fff;
           outline:none;
-          border: 2px solid #F4A242;
+          border: 1px solid #F4A242;
         }
 
       `}</style>
