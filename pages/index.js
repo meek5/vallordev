@@ -320,7 +320,7 @@ export default function Home() {
           outline:none;
         }
         .card-new-project{
-          background-image: url("./assets/images/contact-bg.jpg");
+          background-image: url("/assets/images/contact-bg.jpg");
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: fixed;
