@@ -249,7 +249,7 @@ export default function Home() {
                     <div className="empty-space" />
                     <div className="work-description">
                       <h3>Bisimbi</h3>
-                      <a href="https://bisimbi.com/" target="_blank">
+                      <a href="https://play.google.com/store/apps/details?id=com.vallordev.simbaclub" target="_blank">
                         https://bisimbi.com/
                       </a>
                     </div>
@@ -257,6 +257,17 @@ export default function Home() {
                 </div>
               </div>
               <div className="row">
+              <div className="col-sm-6 col-xs-12 pr-md-1 mb-2">
+                  <div className="work-done" id="work-3">
+                    <div className="empty-space" />
+                    <div className="work-description">
+                      <h3>Deelpay</h3>
+                      <a href="https://deelpay.com/" target="_blank">
+                        https://deelpay.com/
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 <div className="col-sm-6 col-xs-12 mb-3 pl-md-1">
                   <div className="work-done " id="work-2">
                     <div className="empty-space" />
@@ -268,17 +279,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6 col-xs-12 pl-md-1">
-                  <div className="work-done" id="work-3">
-                    <div className="empty-space" />
-                    <div className="work-description">
-                      <h3>Deelpay</h3>
-                      <a href="https://deelpay.com/" target="_blank">
-                        https://deelpay.com/
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -626,14 +627,15 @@ export default function Home() {
           background-color: rgba(0, 0, 0, 0.8);
         }
         #work-1 {
-          background-image: url("/assets/images/bisimbi.jpg");
+          background-image: url("/assets/images/bisimbi2.jpg");
         }
         #work-2 {
-          background-image: url("/assets/images/tayarifood.jpg");
+          background-image: url("/assets/images/tayarifood4.jpg");
         }
         #work-3 {
-          background-image: url("/assets/images/deelpay.jpg");
+          background-image: url("/assets/images/deelpay4.jpg");
         }
+        
         .work-description {
           display: none;
           flex-direction: column;
@@ -733,7 +735,7 @@ export default function Home() {
           outline: none;
         }
         .card-new-project {
-          background-image: url("/assets/images/contact-bg.jpg");
+          background-image: url("/assets/images/contact-bg-1.jpg");
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: fixed;
