@@ -5,13 +5,23 @@ import LiveHelpIcon from "@material-ui/icons/LiveHelp";
 import Question from "../components/qa";
 import ContactForm from "../components/contactForm";
 import ProjectForm from "../components/projectForm";
-import { makeStyles } from "@material-ui/core";
+import {makeStyles} from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography"
+import  Link from "@material-ui/core/Link";
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 const useStyles = makeStyles({
   faqIcon: {
     fontSize: 64,
     textAlign: "center",
   },
+  homeScrollIcon:{
+    fontSize:32,
+    color:"#000",
+    '&:hover':{
+      color:"#000"
+    }
+  }
 });
 
 export default function Home() {
@@ -67,6 +77,11 @@ export default function Home() {
             Nous concevons et développons des <br />
             applications <span>web</span> et <span>mobile</span>.
           </p>
+          <Typography >
+            <Link href="/#services" >
+                <KeyboardArrowDownIcon className={classes.homeScrollIcon} />
+            </Link>
+          </Typography>
           <div className="home-img1" />
           <div className="home-img2" />
           {/* <div className="home-img3" /> */}
@@ -126,7 +141,7 @@ export default function Home() {
         <div className="container-services pt-5" id="services">
           <h2>SERVICES</h2>
           <p>
-            Des services adaptés pour réaliser votre <br />
+            Nous offrons des services adaptés pour réaliser<br /> votre
             projet d’application.
           </p>
           <div className="container my-5">

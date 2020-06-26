@@ -10,13 +10,13 @@ const useStyles = makeStyles({
       outline: "none",
     },
   },
-  btnMenuIcon: {
+  btnHamburgerIcon: {
     fontSize: 32,
   },
 });
 
 function Header() {
-    
+
   const classes = useStyles();
   const [isOpenDrawerRight, setisOpenDrawerRight] = useState(false);
 
@@ -27,7 +27,7 @@ function Header() {
   return (
     <header>
       <IconButton className={classes.btnMenu} onClick={handleCloseDrawerRight}>
-        <MenuIcon className={classes.btnMenuIcon} />
+        <MenuIcon  className={classes.btnHamburgerIcon}/>
       </IconButton>
       <DrowerRight
         isOpen={isOpenDrawerRight}
@@ -36,7 +36,7 @@ function Header() {
       <style jsx>{`
         header {
           height: 52px;
-          background-color: #dad9d7;
+          background-color: transparent;
           position: fixed;
           width: 100%;
           z-index: 50;
