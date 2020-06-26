@@ -1,13 +1,23 @@
 import Head from "next/head";
 import { useState } from "react";
 import Layout from "../components/layout";
+import LiveHelpIcon from "@material-ui/icons/LiveHelp";
 import Question from "../components/qa";
 import ContactForm from "../components/contactForm";
-import ProjectForm from "../components/projectForm"
+import ProjectForm from "../components/projectForm";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  faqIcon: {
+    fontSize: 64,
+    textAlign: "center",
+  },
+});
 
 export default function Home() {
-  const [isOpenContactForm, setisOpenContactForm] = useState(false)
-  const [isOpenProjectForm, setisOpenProjectForm] = useState(false)
+  const classes = useStyles();
+  const [isOpenContactForm, setisOpenContactForm] = useState(false);
+  const [isOpenProjectForm, setisOpenProjectForm] = useState(false);
   const [logos, setlogos] = useState([
     { name: "Redux", url: "/assets/images/redux.svg" },
     { name: "Firebase", url: "/assets/images/firebase.svg" },
@@ -31,12 +41,12 @@ export default function Home() {
     { name: "Blender", url: "/assets/images/blender.svg" },
   ]);
 
-  const handleCloseContactForm=()=>{
-    setisOpenContactForm(prev=>!prev)
-  }
-  const handleCloseProjectForm=()=>{
-    setisOpenProjectForm(prev=>!prev)
-  }
+  const handleCloseContactForm = () => {
+    setisOpenContactForm((prev) => !prev);
+  };
+  const handleCloseProjectForm = () => {
+    setisOpenProjectForm((prev) => !prev);
+  };
 
   return (
     <div className="container-index">
@@ -113,7 +123,7 @@ export default function Home() {
             <div className="square2" />
           </div>
         </div>
-        <div className="container-services pt-5">
+        <div className="container-services pt-5" id="services">
           <h2>SERVICES</h2>
           <p>
             Des services adaptés pour réaliser votre <br />
@@ -165,7 +175,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="py-5">
+          <div className="py-5" id="equipe">
             <h2>NOTRE ÉQUIPE</h2>
             <p>
               Nous sommes une équipe de développeurs
@@ -226,7 +236,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="container-portfolio my-5">
+          <div className="container-portfolio my-5" id="oeuvres">
             <h2>NOS ŒUVRES </h2>
             <p>
               Notre expérience nous permet de réaliser <br /> des applications
@@ -291,21 +301,42 @@ export default function Home() {
           </div>
           <div className="banner-tansition" />
         </div>
-        <div className="container-faq my-5">
-          <h2><i className="fa fa-question-circle"/></h2>
-          <h2>Questions fréquemment posées</h2>
+        <div className="container-faq my-5" id="faq">
+          <h2>
+            <LiveHelpIcon className={classes.faqIcon} />
+            <br />
+            Questions fréquemment posées
+          </h2>
           <div className="container mt-5">
-          <div className="list-group-flush ">
-            <Question question="Réalisez-vous des applications mobiles et des sites web?" answer="La reponse"/>
-            <Question question="Quels sont vos tarifs horaires?" answer="La reponse"/>
-            <Question question="Qu'est ce qu'il faut pour démarrer un projet avec vous?" answer="La reponse"/>
-            <Question question="Où sont installé vos bureaux physiques?" answer="La reponse"/>
-            <Question question="Offrez-vous un contrat de non-divulgation?" answer="La reponse"/>
-            <Question question="J'ai encore des questions, comment puis-je vous contacter?" answer="La reponse"/>
-          </div>
+            <div className="list-group-flush ">
+              <Question
+                question="Réalisez-vous des applications mobiles et des sites web?"
+                answer="La reponse"
+              />
+              <Question
+                question="Quels sont vos tarifs horaires?"
+                answer="La reponse"
+              />
+              <Question
+                question="Qu'est ce qu'il faut pour démarrer un projet avec vous?"
+                answer="La reponse"
+              />
+              <Question
+                question="Où sont installé vos bureaux physiques?"
+                answer="La reponse"
+              />
+              <Question
+                question="Offrez-vous un contrat de non-divulgation?"
+                answer="La reponse"
+              />
+              <Question
+                question="J'ai encore des questions, comment puis-je vous contacter?"
+                answer="La reponse"
+              />
+            </div>
           </div>
         </div>
-        <div className="container-contact py-5">
+        <div className="container-contact py-5" id="contact">
           <div className="container">
             <div className="row">
               <div className="col-sm-6 py-0 pr-md-0">
@@ -317,7 +348,9 @@ export default function Home() {
                     DRC, Butembo, Rue Pré. de la Rép,
                     <br /> Immeuble kidubai 4e Niveau
                   </p>
-                  <button onClick={handleCloseContactForm}>Nous contacter</button>
+                  <button onClick={handleCloseContactForm}>
+                    Nous contacter
+                  </button>
                 </div>
               </div>
               <div className="col-sm-6 py-0 pl-md-0">
@@ -327,13 +360,21 @@ export default function Home() {
                     <br />
                     projet ?
                   </h2>
-                  <button onClick={handleCloseProjectForm}>Parlons en ici!</button>
+                  <button onClick={handleCloseProjectForm}>
+                    Parlons en ici!
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          <ContactForm handleClose={handleCloseContactForm} isOpen={isOpenContactForm}/>
-          <ProjectForm handleClose={handleCloseProjectForm} isOpen={isOpenProjectForm}/>
+          <ContactForm
+            handleClose={handleCloseContactForm}
+            isOpen={isOpenContactForm}
+          />
+          <ProjectForm
+            handleClose={handleCloseProjectForm}
+            isOpen={isOpenProjectForm}
+          />
         </div>
       </Layout>
 
@@ -631,10 +672,10 @@ export default function Home() {
           background-attachment: fixed;
           background-position: center;
           height: 500px;
-          filter:blur(1px);
+          filter: blur(1px);
         }
-        .banner-tansition:hover{
-          filter:blur(0px);
+        .banner-tansition:hover {
+          filter: blur(0px);
         }
 
         /* faq section */

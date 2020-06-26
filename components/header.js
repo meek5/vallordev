@@ -1,42 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { IconButton } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import DrowerRight from "./drowerRight";
+
+const useStyles = makeStyles({
+  btnMenu: {
+    "&:focus": {
+      outline: "none",
+    },
+  },
+  btnMenuIcon: {
+    fontSize: 32,
+  },
+});
 
 function Header() {
+    
+  const classes = useStyles();
+  const [isOpenDrawerRight, setisOpenDrawerRight] = useState(false);
+
+  const handleCloseDrawerRight = () => {
+    setisOpenDrawerRight((prev) => !prev);
+  };
+
   return (
     <header>
-      <div className="btn-hamburguer">
-        <div />
-        <div />
-        <div />
-      </div>
+      <IconButton className={classes.btnMenu} onClick={handleCloseDrawerRight}>
+        <MenuIcon className={classes.btnMenuIcon} />
+      </IconButton>
+      <DrowerRight
+        isOpen={isOpenDrawerRight}
+        handleClose={handleCloseDrawerRight}
+      />
       <style jsx>{`
         header {
           height: 52px;
-          background-color: #DAD9D7;
+          background-color: #dad9d7;
           position: fixed;
           width: 100%;
           z-index: 50;
           display: flex;
           align-items: center;
           justify-content: flex-end;
-          padding-right: 20px;
-        }
-        .btn-hamburguer {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 24px;
-        }
-        .btn-hamburguer div {
-          height: 5px;
-          width: 34px;
-          background: rgba(0, 0, 0, 0.5);
-          border-radius: 2px;
-        }
-        .btn-hamburguer:hover {
-          cursor: pointer;
-        }
-        .btn-hamburguer:hover div {
-          background-color: #000;
+          padding-right: 10px;
         }
       `}</style>
     </header>

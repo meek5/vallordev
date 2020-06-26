@@ -1,6 +1,17 @@
 import React, { useState } from "react";
+import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  listQAicon: {
+    color: "#F4A242",
+    fontSize: 28,
+  },
+});
 
 export default function Question({ question, answer }) {
+  const classes = useStyles();
   const [showAnswer, setshowAnswer] = useState(false);
   const toggleAnswer = () => {
     setshowAnswer(!showAnswer);
@@ -13,9 +24,9 @@ export default function Question({ question, answer }) {
         </h6>
         <div className="chevron-icon">
           {showAnswer ? (
-            <i className="fa fa-chevron-down chevron"  />
+            <KeyboardArrowDownIcon className={classes.listQAicon} />
           ) : (
-            <i className="fa fa-chevron-right chevron" />
+            <KeyboardArrowRightIcon className={classes.listQAicon} />
           )}
         </div>
       </div>
@@ -49,9 +60,6 @@ export default function Question({ question, answer }) {
         .answer-text {
           font-size: 1.2rem;
           color: rgba(0, 0, 0, 0.7);
-        }
-        .chevron{
-            color:#F4A242;
         }
       `}</style>
     </div>
