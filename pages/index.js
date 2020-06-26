@@ -428,7 +428,7 @@ export default function Home() {
           position: absolute;
           height: 92px;
           width: 92px;
-          background-image: url("/assets/images/girl-coder1.jpg");
+          background-image: url("/assets/images/girl-coder1-1.jpg");
           background-size: 196px;
           background-repeat: no-repeat;
           background-attachment: fixed;
@@ -441,7 +441,7 @@ export default function Home() {
           position: absolute;
           height: 45px;
           width: 45px;
-          background-image: url("/assets/images/code2.jpg");
+          background-image: url("/assets/images/code2-1.jpg");
           background-size: 220px;
           background-repeat: no-repeat;
           background-attachment: fixed;
@@ -633,7 +633,7 @@ export default function Home() {
           background-image: url("/assets/images/tayarifood4.jpg");
         }
         #work-3 {
-          background-image: url("/assets/images/deelpay4.jpg");
+          background-image: url("/assets/images/deelpay6.jpg");
         }
         
         .work-description {
