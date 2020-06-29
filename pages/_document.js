@@ -34,28 +34,26 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <style jsx global>{`
-            html{
+            html {
               scroll-behavior: smooth;
             }
-            
             body {
               margin: 0px;
               font-family: "Karla", sans-serif;
             }
             body::-webkit-scrollbar-track {
               background-color: #000;
-          }
-          
-          body::-webkit-scrollbar {
+            }
+
+            body::-webkit-scrollbar {
               width: 15px;
               background-color: #000;
-          }
-          
-          body::-webkit-scrollbar-thumb {
+            }
+
+            body::-webkit-scrollbar-thumb {
               background-color: #fff;
-              border-radius:10px;
-             margin:5px;
-          }
+              border-radius: 10px;
+            }
           `}</style>
         </body>
       </Html>
