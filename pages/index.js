@@ -5,23 +5,23 @@ import LiveHelpIcon from "@material-ui/icons/LiveHelp";
 import Question from "../components/qa";
 import ContactForm from "../components/contactForm";
 import ProjectForm from "../components/projectForm";
-import {makeStyles} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography"
-import  Link from "@material-ui/core/Link";
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 const useStyles = makeStyles({
   faqIcon: {
     fontSize: 64,
     textAlign: "center",
   },
-  homeScrollIcon:{
-    fontSize:32,
-    color:"#000",
-    '&:hover':{
-      color:"#000"
-    }
-  }
+  homeScrollIcon: {
+    fontSize: 32,
+    color: "#000",
+    "&:hover": {
+      color: "#000",
+    },
+  },
 });
 
 export default function Home() {
@@ -77,9 +77,9 @@ export default function Home() {
             Nous concevons et développons des <br />
             applications <span>web</span> et <span>mobile</span>.
           </p>
-          <Typography >
-            <Link href="/#services" >
-                <KeyboardArrowDownIcon className={classes.homeScrollIcon} />
+          <Typography>
+            <Link href="/#services">
+              <KeyboardArrowDownIcon className={classes.homeScrollIcon} />
             </Link>
           </Typography>
           <div className="home-img1" />
@@ -141,8 +141,8 @@ export default function Home() {
         <div className="container-services pt-5" id="services">
           <h2>SERVICES</h2>
           <p>
-            Nous offrons des services adaptés pour réaliser<br /> votre
-            projet d’application.
+            Nous offrons des services adaptés pour concrétiser
+            <br /> votre projet d’application.
           </p>
           <div className="container my-5">
             <div className="row">
@@ -156,7 +156,7 @@ export default function Home() {
                   />
                   <h4>UX/UI design</h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nous travaillons à la fois l'expérience utilisateur et les interfaces pour proposer des produits qui conviendront à nos clients et à leurs utilisateurs.
                   </p>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function Home() {
                   />
                   <h4>Développement</h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nous transformons les maquettes des projets des clients en produits utilisables en écrivant du code propre, performant et facile à maintenir.
                   </p>
                 </div>
               </div>
@@ -184,7 +184,8 @@ export default function Home() {
                   />
                   <h4>Conseil digital</h4>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nous vous aidons à définir des stratégies et vous soutenons
+                    tout au long du processus.
                   </p>
                 </div>
               </div>
@@ -193,9 +194,9 @@ export default function Home() {
           <div className="py-5" id="equipe">
             <h2>NOTRE ÉQUIPE</h2>
             <p>
-              Nous sommes une équipe de développeurs
-              <br /> et designers autour des valeurs pour
-              <br /> la réussite des projets innovants.
+            Une équipe qui fait ce qu’elle sait faire le mieux.
+            <br />Nous sommes des développeurs et designers
+            <br/>engagés autour des valeurs.
             </p>
             <div className="container mt-5">
               <div className="row">
@@ -203,31 +204,7 @@ export default function Home() {
                   <div className="card-value">
                     <h4>Innovation</h4>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4 mb-4">
-                  <div className="card-value">
-                    <h4>Intégrité</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4 mb-4">
-                  <div className="card-value">
-                    <h4>Performance</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-4 mb-4">
-                  <div className="card-value ">
-                    <h4>Transparence</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Chaque jour est pour nous l'occasion de créer, d'innover, d'imaginer et de révolutionner des projets.
                     </p>
                   </div>
                 </div>
@@ -235,7 +212,32 @@ export default function Home() {
                   <div className="card-value">
                     <h4>Passion</h4>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Vallordev, c’est avant tout une équipe soudée autour d'une mission ponctuée de confiance et de passion.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-4 mb-4">
+                  <div className="card-value">
+                    <h4>Pluridisciplinarité</h4>
+                    <p>
+                      Une équipe dynamique ayant les compétences nécessaires pour couvrir toutes nos services.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-4 mb-4">
+                  <div className="card-value ">
+                    <h4>Transparence</h4>
+                    <p>
+                    Nous communiquons avec nos clients de manière transparente
+                      et directe dès le début de chaque projet.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-4 mb-4">
+                  <div className="card-value"> 
+                    <h4>Sécurité</h4>
+                    <p>
+                      Votre idée est en sécurité. Toutes nos conversations sont strictement confidentielles.
                     </p>
                   </div>
                 </div>
@@ -243,7 +245,7 @@ export default function Home() {
                   <div className="card-value">
                     <h4>Vitesse</h4>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nous détectons rapidement vos besoins et les faisons correspondre avec des bonnes ressources pour votre réussite.
                     </p>
                   </div>
                 </div>
@@ -264,7 +266,10 @@ export default function Home() {
                     <div className="empty-space" />
                     <div className="work-description">
                       <h3>Bisimbi</h3>
-                      <a href="https://play.google.com/store/apps/details?id=com.vallordev.simbaclub" target="_blank">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.vallordev.simbaclub"
+                        target="_blank"
+                      >
                         https://bisimbi.com/
                       </a>
                     </div>
@@ -272,7 +277,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="row">
-              <div className="col-sm-6 col-xs-12 pr-md-1 mb-2">
+                <div className="col-sm-6 col-xs-12 pr-md-1 mb-2">
                   <div className="work-done" id="work-3">
                     <div className="empty-space" />
                     <div className="work-description">
@@ -294,7 +299,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -327,27 +331,28 @@ export default function Home() {
             <div className="list-group-flush ">
               <Question
                 question="Réalisez-vous des applications mobiles et des sites web?"
-                answer="La reponse"
+                answer="Bien sûr que oui! Notre mission est de construire des applications et des sites web de qualité pour booster votre activité."
               />
               <Question
                 question="Quels sont vos tarifs horaires?"
-                answer="La reponse"
+                answer="Nous offrons une tarification juste et des prix compétitifs. Respectez votre budget sans sacrifier la qualité."
               />
               <Question
                 question="Qu'est ce qu'il faut pour démarrer un projet avec vous?"
-                answer="La reponse"
+                answer="Pour travailler ensemble, il faut nous parler de votre projet depuis la section contacter nous ci-dessous ou bien en arrivant physiquement à notre agence pour discuter de votre projet. Vous pouvez de même nous fixer rendez-vous dans votre organisation."
               />
               <Question
                 question="Où sont installé vos bureaux physiques?"
-                answer="La reponse"
+                answer="Notre siège est installé à Butembo, Rue Pré. de la Rép, No 121
+                Immeuble kidubai 4e Niveau. Nous réalisons aussi d'autres projet en distance dans n'importe quelle ville du pays."
               />
               <Question
                 question="Offrez-vous un contrat de non-divulgation?"
-                answer="La reponse"
+                answer="Votre idée est en sécurité. Toutes nos conversations sont strictement confidentielles."
               />
               <Question
                 question="J'ai encore des questions, comment puis-je vous contacter?"
-                answer="La reponse"
+                answer="Pour toute autre question, veillez nous écrire depuis la section contacter nous ci-dessous. Notre équipe n'hésitera pas à vous répondre."
               />
             </div>
           </div>
@@ -558,7 +563,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          height: 171px;
+          height: 220px;
         }
         .card-service h4 {
           color: #f4a242;
@@ -650,7 +655,7 @@ export default function Home() {
         #work-3 {
           background-image: url("/assets/images/deelpay6.jpg");
         }
-        
+
         .work-description {
           display: none;
           flex-direction: column;
