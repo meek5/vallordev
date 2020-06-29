@@ -66,6 +66,7 @@ const useStyles = makeStyles({
     paddingBottom: 5,
     paddingLeft: 10,
     paddingRight: 10,
+    marginBottom:30,
     "& label": {
       fontFamily: "Karla",
       fontSize: 22,
@@ -85,8 +86,8 @@ const useStyles = makeStyles({
     paddingBottom: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    marginTop: 20,
-    marginBottom: 20,
+    marginBottom: 30,
+    fontFamily:"Karla",
     "& label": {
       fontFamily: "Karla",
       fontSize: 22,
@@ -115,24 +116,63 @@ function ProjectForm({ isOpen, handleClose }) {
         </IconButton>{" "}
             <Typography className={classes.titleForm}>Un nouveau projet ?</Typography> 
       </DialogTitle>
-      <DialogContent>
+      <DialogContent className="">
         <form>
-          <div>
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6">
+                <TextField
+                  type="text"
+                  label="Nom et Prénom*"
+                  className={classes.inputField}
+                />
+              </div>
+              <div className="col-sm-6">
+                <TextField
+                  type="email"
+                  label="Email*"
+                  className={classes.inputField}
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm-6">
+                <TextField
+                  type="email"
+                  label="Téléphone*"
+                  className={classes.inputField}
+                />
+              </div>
+              <div className="col-sm-6">
+                <TextField
+                type="text"
+                label="Entreprise"
+                className={classes.inputField}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="container">
+         
             <TextField
-              type="email"
-              label="Votre email"
+              type="text"
+              label="Type d'entreprise"
               className={classes.inputField}
             />
-          </div>
-          <div>
             <TextField
-              label="Votre message"
+              type="text"
+              label="Nom du projet"
+              className={classes.inputField}
+            />
+            <TextField
+              label="Description du projext"
+              placeholder="( Indiquez-nous les informations spécifiques, détails ou spécificités techniques de votre projet )."
               multiline
-              rows={30}
+              rows={6}
               className={classes.inputMulti}
             />
           </div>
-          <div className="text-right">
+          <div className="container text-right">
             <Button
               variant="outlined"
               className={classes.btnSend}

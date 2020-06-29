@@ -335,7 +335,7 @@ export default function Home() {
               />
               <Question
                 question="Quels sont vos tarifs horaires?"
-                answer="Nous offrons une tarification juste et des prix compétitifs. Respectez votre budget sans sacrifier la qualité."
+                answer="Nous offrons une tarification juste et des prix compétitifs. Ensemble nous respectons votre budget sans sacrifier la qualité."
               />
               <Question
                 question="Qu'est ce qu'il faut pour démarrer un projet avec vous?"
@@ -344,7 +344,7 @@ export default function Home() {
               <Question
                 question="Où sont installé vos bureaux physiques?"
                 answer="Notre siège est installé à Butembo, Rue Pré. de la Rép, No 121
-                Immeuble kidubai 4e Niveau. Nous réalisons aussi d'autres projet en distance dans n'importe quelle ville du pays."
+                Immeuble kidubai 4e Niveau. Nous réalisons de même des projets en distance dans n'importe quelle ville du pays."
               />
               <Question
                 question="Offrez-vous un contrat de non-divulgation?"
