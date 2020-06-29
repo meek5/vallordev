@@ -29,12 +29,16 @@ class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
+          <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+
+          <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
         </Head>
         <body>
           <Main />
           <NextScript />
           <style jsx global>{`
             html {
+              --scroll-behavior: smooth;
               scroll-behavior: smooth;
             }
             body {
