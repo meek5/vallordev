@@ -1,6 +1,7 @@
 import React from "react";
 import Drawer from "@material-ui/core/Drawer";
 import Link from "@material-ui/core/Link";
+import {TweenMax} from "gsap"
 import {
   List,
   makeStyles,
@@ -38,10 +39,14 @@ const useStyles = makeStyles({
   },
 });
 function DrowerRight({ isOpen, handleClose }) {
+
   const classes = useStyles();
-  const preventDefault=()=>{
+
+  const preventDefault=(location)=>{
+      TweenMax.to(window, {duration:1, scrollTo:{y:location, offsetY:52}})
       handleClose()
   }
+  
   return (
     <Drawer anchor="right" open={isOpen} onClose={handleClose}>
       <List className={classes.listMenu}>
@@ -50,7 +55,7 @@ function DrowerRight({ isOpen, handleClose }) {
             <ClearIcon />
           </IconButton>{" "}
         </div>
-        <Link href="/" className={classes.listLink} onClick={preventDefault} color="inherit">
+        <Link className={classes.listLink} onClick={preventDefault} color="inherit">
           <ListItem className={classes.listItemCont}>
             <ListItemIcon>
               <HomeIcon />
@@ -58,15 +63,15 @@ function DrowerRight({ isOpen, handleClose }) {
             <ListItemText>Accueil</ListItemText>
           </ListItem>
         </Link>
-        <Link href="/#services" className={classes.listLink} onClick={preventDefault} color="inherit">
-          <ListItem>
+        <div  className={classes.listLink}  color="inherit">
+          <ListItem onClick={preventDefault.bind("#services")}>
             <ListItemIcon>
               <ListIcon />
             </ListItemIcon>
             <ListItemText>Services</ListItemText>
           </ListItem>
-        </Link>
-        <Link href="/#equipe" className={classes.listLink} onClick={preventDefault} color="inherit">
+        </div>
+        <Link className={classes.listLink} onClick={preventDefault.bind("#equipe")} color="inherit">
           <ListItem>
             <ListItemIcon>
               <PeopleOutlineIcon />

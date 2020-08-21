@@ -37,10 +37,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <style jsx global>{`
-            html {
-              --scroll-behavior: smooth;
-              scroll-behavior: smooth;
-            }
+           
             body {
               margin: 0px;
               font-family: "Karla", sans-serif;

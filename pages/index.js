@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
+import {gsap} from "gsap"
 import Layout from "../components/layout";
 import LiveHelpIcon from "@material-ui/icons/LiveHelp";
 import Question from "../components/qa";
@@ -9,6 +10,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+
+
 
 const useStyles = makeStyles({
   faqIcon: {
@@ -24,10 +27,13 @@ const useStyles = makeStyles({
   },
 });
 
+
+
 export default function Home() {
   const classes = useStyles();
   const [isOpenContactForm, setisOpenContactForm] = useState(false);
   const [isOpenProjectForm, setisOpenProjectForm] = useState(false);
+  
   const [logos, setlogos] = useState([
     { name: "Redux", url: "/assets/images/redux.svg" },
     { name: "Firebase", url: "/assets/images/firebase.svg" },
@@ -58,6 +64,14 @@ export default function Home() {
     setisOpenProjectForm((prev) => !prev);
   };
 
+  const scrollToService = () => {
+      // gsap.install(window)
+      gsap.to(window, {duration: 1, scrollTo: { y:"#services", offsetY: 52 }
+      }).play();
+    
+  console.log("bonjour")
+  };
+ 
   return (
     <div className="container-index">
       <Head>
@@ -77,11 +91,14 @@ export default function Home() {
             Nous concevons et développons des <br />
             applications <span>web</span> et <span>mobile</span>.
           </p>
-          <Typography>
-            <Link href="/#services">
+          
+          {/* <Typography > */}
+          <div onClick={scrollToService}>
+            {/* <Link href="/#services"> */}
               <KeyboardArrowDownIcon className={classes.homeScrollIcon} />
-            </Link>
-          </Typography>
+            {/* </Link> */}
+            </div>
+          {/* </Typography> */}
           <div className="home-img1" />
           <div className="home-img2" />
           {/* <div className="home-img3" /> */}
@@ -400,7 +417,7 @@ export default function Home() {
       </Layout>
 
       <style jsx>{`
-        .container-index {
+        .container-index{
           min-height: 100vh;
           background: #dad9d7;
         }
