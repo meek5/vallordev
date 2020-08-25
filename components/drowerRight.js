@@ -1,7 +1,6 @@
 import React from "react";
 import Drawer from "@material-ui/core/Drawer";
 import Link from "@material-ui/core/Link";
-import {TweenMax} from "gsap"
 import {
   List,
   makeStyles,
@@ -22,7 +21,7 @@ const useStyles = makeStyles({
   listMenu: {
     width: 250,
     height: "100%",
-    backgroundColor: "#DAD9D7",
+    backgroundColor: "#fff",
   },
   btnClose: {
     "&:focus": {
@@ -42,10 +41,6 @@ function DrowerRight({ isOpen, handleClose }) {
 
   const classes = useStyles();
 
-  const preventDefault=(location)=>{
-      TweenMax.to(window, {duration:1, scrollTo:{y:location, offsetY:52}})
-      handleClose()
-  }
   
   return (
     <Drawer anchor="right" open={isOpen} onClose={handleClose}>
@@ -55,7 +50,7 @@ function DrowerRight({ isOpen, handleClose }) {
             <ClearIcon />
           </IconButton>{" "}
         </div>
-        <Link className={classes.listLink} onClick={preventDefault} color="inherit">
+        <Link className={classes.listLink} href="/" color="inherit">
           <ListItem className={classes.listItemCont}>
             <ListItemIcon>
               <HomeIcon />
@@ -64,30 +59,34 @@ function DrowerRight({ isOpen, handleClose }) {
           </ListItem>
         </Link>
         <div  className={classes.listLink}  color="inherit">
-          <ListItem onClick={preventDefault.bind("#services")}>
+          <ListItem>
             <ListItemIcon>
               <ListIcon />
             </ListItemIcon>
             <ListItemText>Services</ListItemText>
           </ListItem>
         </div>
-        <Link className={classes.listLink} onClick={preventDefault.bind("#equipe")} color="inherit">
+        <Link className={classes.listLink} href="#equipe" color="inherit">
+          <a>
           <ListItem>
             <ListItemIcon>
               <PeopleOutlineIcon />
             </ListItemIcon>
             <ListItemText>Equipe</ListItemText>
           </ListItem>
+          </a>
         </Link>
-        <Link href="/#oeuvres" className={classes.listLink} onClick={preventDefault} color="inherit">
+        <Link href="/#oeuvres" className={classes.listLink} color="inherit">
+          <a>
           <ListItem>
             <ListItemIcon>
               <DoneAllIcon />
             </ListItemIcon>
             <ListItemText>Œuvres</ListItemText>
           </ListItem>
+          </a>
         </Link>
-        <Link href="/#faq" className={classes.listLink} onClick={preventDefault} color="inherit">
+        <Link href="/#faq" className={classes.listLink}  color="inherit">
           <ListItem>
             <ListItemIcon>
               <LiveHelpIcon />
@@ -95,7 +94,7 @@ function DrowerRight({ isOpen, handleClose }) {
             <ListItemText>FAQ</ListItemText>
           </ListItem>
         </Link>
-        <Link href="/#contact" className={classes.listLink} onClick={preventDefault} color="inherit">
+        <Link href="/#contact" className={classes.listLink}  color="inherit">
           <ListItem>
             <ListItemIcon>
               <ContactSupportIcon />

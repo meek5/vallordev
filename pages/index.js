@@ -1,14 +1,12 @@
 import Head from "next/head";
+import Link from "next/link"
 import { useState } from "react";
-import {gsap} from "gsap"
 import Layout from "../components/layout";
 import LiveHelpIcon from "@material-ui/icons/LiveHelp";
 import Question from "../components/qa";
 import ContactForm from "../components/contactForm";
 import ProjectForm from "../components/projectForm";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 
@@ -34,7 +32,7 @@ export default function Home() {
   const [isOpenContactForm, setisOpenContactForm] = useState(false);
   const [isOpenProjectForm, setisOpenProjectForm] = useState(false);
   
-  const [logos, setlogos] = useState([
+  const [logos] = useState([
     { name: "Redux", url: "/assets/images/redux.svg" },
     { name: "Firebase", url: "/assets/images/firebase.svg" },
     { name: "Reactjs", url: "/assets/images/reactjs.svg" },
@@ -64,13 +62,13 @@ export default function Home() {
     setisOpenProjectForm((prev) => !prev);
   };
 
-  const scrollToService = () => {
-      // gsap.install(window)
-      gsap.to(window, {duration: 1, scrollTo: { y:"#services", offsetY: 52 }
-      }).play();
+  // const scrollToService = () => {
+  //     // gsap.install(window)
+  //     gsap.to(window, {duration: 1, scrollTo: { y:"#services", offsetY: 52 }
+  //     }).play();
     
-  console.log("bonjour")
-  };
+  // console.log("bonjour")
+  // };
  
   return (
     <div className="container-index">
@@ -93,11 +91,11 @@ export default function Home() {
           </p>
           
           {/* <Typography > */}
-          <div onClick={scrollToService}>
-            {/* <Link href="/#services"> */}
+          {/* <div onClick={scrollToService}> */}
+            <Link href="/#services">
               <KeyboardArrowDownIcon className={classes.homeScrollIcon} />
-            {/* </Link> */}
-            </div>
+            </Link>
+            {/* </div> */}
           {/* </Typography> */}
           <div className="home-img1" />
           <div className="home-img2" />
@@ -322,7 +320,7 @@ export default function Home() {
           <div>
             <h2>OUTILS</h2>
             <p>
-              Nous utilisons des technologies et outils de
+              Nous utilisons des outils et technologies de
               <br />
               dernière génération.
             </p>
@@ -381,7 +379,7 @@ export default function Home() {
                 <div className="card-contact">
                   <h4>Nous contacter</h4>
                   <p>Tél: 0978308679</p>
-                  <p className="email">contact@vallordev.com</p>
+                  <p className="email">contact@vallor.dev</p>
                   <p>
                     DRC, Butembo, Rue Pré. de la Rép,
                     <br /> Immeuble kidubai 4e Niveau
@@ -419,7 +417,7 @@ export default function Home() {
       <style jsx>{`
         .container-index{
           min-height: 100vh;
-          background: #dad9d7;
+          /* background: #dad9d7; */
         }
 
         /* Ecran d'accueil du site vallordev */
@@ -429,11 +427,11 @@ export default function Home() {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          background-image: url("/assets/images/bg-home-2.jpg");
+          /* background-image: url("/assets/images/bg-home-2.jpg");
           background-size: contain;
           background-attachment: fixed;
           background-repeat: no-repeat;
-          background-position: bottom;
+          background-position: bottom; */
         }
         @media (min-width: 768px) {
           .home-header {
@@ -555,7 +553,7 @@ export default function Home() {
         /* services section */
 
         .container-services {
-          background-color: #e2e1df;
+          /* background-color: #e2e1df; */
         }
         .container-services h2 {
           font-family: "Sorts Mill Goudy", serif;
@@ -733,7 +731,8 @@ export default function Home() {
         .container-contact {
         }
         .card-contact {
-          background: #e8e9ee;
+          /* background: #e8e9ee; */
+          background-color:#DAD9D7;
           height: 330px;
           display: flex;
           flex-direction: column;
@@ -755,10 +754,11 @@ export default function Home() {
           text-decoration-line: underline;
         }
         .card-contact button {
-          border: 1px solid #f4a242;
+          border: 1px solid #000;
+          background-color:#000;
           box-sizing: border-box;
           border-radius: 25px;
-          color: #f4a242;
+          color: #fff;
           padding: 10px 25px 10px 25px;
           font-size: 24px;
           font-weight: 100;
@@ -767,8 +767,9 @@ export default function Home() {
         .card-contact button:hover,
         .card-contact button:focus,
         .card-contact button:active {
-          background-color: #f4a242;
-          color: #fff;
+          /* background-color: #f4a242; */
+          background-color: #fff;
+          color: #000;
           outline: none;
         }
         .card-new-project {
@@ -804,10 +805,11 @@ export default function Home() {
         .card-new-project button:hover,
         .card-new-project button:focus,
         .card-new-project button:active {
-          background-color: #f4a242;
-          color: #fff;
+          /* background-color: #f4a242; */
+          background-color: #fff;
+          color: #000;
           outline: none;
-          border: 1px solid #f4a242;
+          border: 1px solid #fff;
         }
       `}</style>
     </div>

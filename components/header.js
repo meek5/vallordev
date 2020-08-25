@@ -36,7 +36,8 @@ function Header() {
       <style jsx>{`
         header {
           height: 52px;
-          background-color: rgba(218, 217, 215,0.9);
+          /* background-color: rgba(218, 217, 215,0.9); */
+          background-color: rgba(255, 255, 255,0.8);
           position: fixed;
           width: 100%;
           z-index: 50;

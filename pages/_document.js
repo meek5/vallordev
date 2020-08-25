@@ -36,11 +36,12 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <style jsx global>{`
+          <style global jsx>{`
            
             body {
               margin: 0px;
               font-family: "Karla", sans-serif;
+              scroll-behavior: smooth;
             }
             body::-webkit-scrollbar-track {
               background-color: #000;
