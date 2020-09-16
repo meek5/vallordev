@@ -422,7 +422,7 @@ export default function Home() {
 
         /* Ecran d'accueil du site vallordev */
         .home-header {
-          min-height: 90vh;
+          min-height: 85vh;
           display: flex;
           flex-direction: column;
           align-items: center;
