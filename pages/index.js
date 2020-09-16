@@ -416,7 +416,7 @@ export default function Home() {
 
       <style jsx>{`
         .container-index {
-          min-height: 100vh;
+          min-height: calc(100vh - 100px);
           /* background: #dad9d7; */
         }
 
