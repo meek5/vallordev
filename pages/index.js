@@ -89,6 +89,7 @@ export default function Home() {
             Nous concevons et développons des <br />
             applications <span>web</span> et <span>mobile</span>.
           </p>
+          <p>Ce site est à mainteance.</p>
 
           {/* <Typography > */}
           {/* <div onClick={scrollToService}> */}
@@ -422,7 +423,7 @@ export default function Home() {
 
         /* Ecran d'accueil du site vallordev */
         .home-header {
-          min-height: 85vh;
+          min-height: 80vh;
           display: flex;
           flex-direction: column;
           align-items: center;
