@@ -154,11 +154,11 @@ export default function Home() {
           </div>
         </div> */}
         <div className="container-services pt-5" id="services">
-          <h2>SERVICES</h2>
+          {/* <h2>SERVICES</h2>
           <p>
             Nous offrons des services adaptés pour concrétiser
             <br /> votre projet d’application.
-          </p>
+          </p> */}
           {/* <div className="container my-5">
             <div className="row">
               <div className="col-md-4 col-xs-12 mb-3">
@@ -334,7 +334,7 @@ export default function Home() {
               </div>
             </div>
           </div> */}
-          <div className="banner-tansition" />
+          {/* <div className="banner-tansition" /> */}
         </div>
         {/* <div className="container-faq my-5" id="faq">
           <h2>
