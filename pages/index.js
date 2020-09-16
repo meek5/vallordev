@@ -89,7 +89,7 @@ export default function Home() {
             Nous concevons et développons des <br />
             applications <span>web</span> et <span>mobile</span>.
           </p>
-          <p>Oops! Ce site est à mainteance.</p>
+          <p>Oops! Ce site est à maintenance.</p>
 
           {/* <Typography > */}
           {/* <div onClick={scrollToService}> */}
