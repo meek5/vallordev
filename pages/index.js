@@ -416,13 +416,13 @@ export default function Home() {
 
       <style jsx>{`
         .container-index {
-          min-height: 100vh;
+          /* min-height: 100vh; */
           /* background: #dad9d7; */
         }
 
         /* Ecran d'accueil du site vallordev */
         .home-header {
-          min-height: 95vh;
+          min-height: 90vh;
           display: flex;
           flex-direction: column;
           align-items: center;
