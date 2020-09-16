@@ -89,19 +89,19 @@ export default function Home() {
             Nous concevons et développons des <br />
             applications <span>web</span> et <span>mobile</span>.
           </p>
-          
+
           {/* <Typography > */}
           {/* <div onClick={scrollToService}> */}
-            <Link href="/#services">
-              <KeyboardArrowDownIcon className={classes.homeScrollIcon} />
-            </Link>
-            {/* </div> */}
+          {/* <Link href="/#services">
+            <KeyboardArrowDownIcon className={classes.homeScrollIcon} />
+          </Link> */}
+          {/* </div> */}
           {/* </Typography> */}
-          <div className="home-img1" />
+          {/* <div className="home-img1" />
           <div className="home-img2" />
-          {/* <div className="home-img3" /> */}
+          <div className="home-img3" /> */}
         </div>
-        <div className="parteners">
+        {/* <div className="parteners">
           <h6>ILS NOUS FONT DÉJÀ CONFIANCE</h6>
           <div className="logos-div">
             <img
@@ -152,14 +152,14 @@ export default function Home() {
             <div className="square1" />
             <div className="square2" />
           </div>
-        </div>
+        </div> */}
         <div className="container-services pt-5" id="services">
           <h2>SERVICES</h2>
           <p>
             Nous offrons des services adaptés pour concrétiser
             <br /> votre projet d’application.
           </p>
-          <div className="container my-5">
+          {/* <div className="container my-5">
             <div className="row">
               <div className="col-md-4 col-xs-12 mb-3">
                 <div className="card-service">
@@ -205,8 +205,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="py-5" id="equipe">
+          </div> */}
+          {/* <div className="py-5" id="equipe">
             <h2>NOTRE ÉQUIPE</h2>
             <p>
             Une équipe qui fait ce qu’elle sait faire le mieux.
@@ -266,9 +266,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="container-portfolio my-5" id="oeuvres">
+          {/* <div className="container-portfolio my-5" id="oeuvres">
             <h2>NOS ŒUVRES </h2>
             <p>
               Notre expérience nous permet de réaliser <br /> des applications
@@ -316,8 +316,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <h2>OUTILS</h2>
             <p>
               Nous utilisons des outils et technologies de
@@ -333,10 +333,10 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="banner-tansition" />
         </div>
-        <div className="container-faq my-5" id="faq">
+        {/* <div className="container-faq my-5" id="faq">
           <h2>
             <LiveHelpIcon className={classes.faqIcon} />
             <br />
@@ -371,8 +371,8 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-        <div className="container-contact py-5" id="contact">
+        </div> */}
+        {/* <div className="container-contact py-5" id="contact">
           <div className="container">
             <div className="row">
               <div className="col-sm-6 py-0 pr-md-0">
@@ -411,18 +411,18 @@ export default function Home() {
             handleClose={handleCloseProjectForm}
             isOpen={isOpenProjectForm}
           />
-        </div>
+        </div> */}
       </Layout>
 
       <style jsx>{`
-        .container-index{
+        .container-index {
           min-height: 100vh;
           /* background: #dad9d7; */
         }
 
         /* Ecran d'accueil du site vallordev */
         .home-header {
-          min-height: 85vh;
+          min-height: 100vh;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -732,7 +732,7 @@ export default function Home() {
         }
         .card-contact {
           /* background: #e8e9ee; */
-          background-color:#DAD9D7;
+          background-color: #dad9d7;
           height: 330px;
           display: flex;
           flex-direction: column;
@@ -755,7 +755,7 @@ export default function Home() {
         }
         .card-contact button {
           border: 1px solid #000;
-          background-color:#000;
+          background-color: #000;
           box-sizing: border-box;
           border-radius: 25px;
           color: #fff;

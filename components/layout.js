@@ -5,7 +5,7 @@ import Header from "./header"
 function Layout({ children }) {
   return (
     <div>
-      <Header/>
+      {/* <Header/> */}
       <main>{children}</main>
       <Footer />
     </div>
